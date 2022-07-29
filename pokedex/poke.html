@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="./poke.js" defer></script>
+    <link rel="stylesheet" href="poke.css">
+</head>
+<body>
+  <br>
+    <h1 class="tittle">Pokédex</h1>
+    
+    <!-- Input para cuando apretenemos enter llamemos a la función buscar pokemon -->
+    <form action="" onsubmit="searchPokemon(event)">
+        <input type="text" name="pokemon" autocomplete="off">
+    </form>
+    <!-- Aquí va el contenido de la tarjeta con la info del pokémon -->
+    <div data-poke-card class="poke-card"> 
+        <div data-poke-name>Ingresa el nombre del Pokémon y presiona la tecla 'enter'.</div>
+        <div data-poke-img-container class="img-container">
+            <img data-poke-img="poke-img" src="./img/poke-shadow.png" alt="PokeIMG" width="200px">
+        </div>
+        <div data-poke-id></div>
+        <div data-poke-types class="poke-types"></div>
+        <div data-poke-stats class="poke-stats"></div>
+    </div>
+    <div class="pokemon-container">
+    <!--Aquí van los botones de siguiente y anterior  -->
+    </div>
+    <nav class="pagination" aria-label="...">
+        <ul class="pagination">
+          <li class="page-item" id="previous">
+            <a class="page-link" href="#" tabindex="-1">Anterior</a>
+          </li>
+          <li class="page-item" id="next">
+            <a class="page-link" href="#">Siguiente</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Este es el spiner que muestra los stats de cada pokemon
+       -->
+    <div id="spinner" class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+</body>
+</html>

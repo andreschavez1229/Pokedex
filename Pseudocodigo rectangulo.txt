@@ -1,0 +1,10 @@
+Área de un rectangulo
+var area = base*altura
+base = (n)
+altura = (n)
+
+Proceso para obtener el área de un rectangulo:
+	base = ingresa el valor de la base (n)
+	altura = ingresa el valor de la altura(n)
+	area = base*altura = (n);
+	resultado= (n)
